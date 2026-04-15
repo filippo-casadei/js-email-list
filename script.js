@@ -14,10 +14,19 @@ function richiestaApi() {
     })
     .then(function(dato) {
         console.log(dato.response)
+        lista.innerHTML = lista.innerHTML + "<li>" + dato.response + "</li>"
     })
+
+    
 };
 
-// tramite un ciclo for chiedo di ciclarlo 10 volte
+// tramite un ciclo for chiedo di ciclarlo 10 volte, in console.log ho 10 mail stamapte
 for (let i = 0; i < 10; i++) {
 richiestaApi();
 };
+
+// PENSIERI DA CONDIVIDERE DURANTE LA CORREZIONE:
+// Avrebbe avuto senso creare un array vuoto e pusharci dentro ogni nuova mail random?
+// Sarebbe stato piu corretto usare CreateElement per il <li> e salvarlo in una variabile?
+// Avrebbe avuto senso creare un contatore che cresce da 0 a 10 per sapere quando le mail
+// sono state tutte create? 
