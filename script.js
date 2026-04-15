@@ -14,7 +14,11 @@ function richiestaApi() {
     })
     .then(function(dato) {
         console.log(dato.response)
-        lista.innerHTML = lista.innerHTML + "<li>" + dato.response + "</li>"
+       // lista.innerHTML = lista.innerHTML + "<li>" + dato.response + "</li>"
+        const li = document.createElement("li");
+        li.textContent = dato.response;
+
+        lista.appendChild(li);
     })
 
     
@@ -27,6 +31,6 @@ richiestaApi();
 
 // PENSIERI DA CONDIVIDERE DURANTE LA CORREZIONE:
 // Avrebbe avuto senso creare un array vuoto e pusharci dentro ogni nuova mail random?
-// Sarebbe stato piu corretto usare CreateElement per il <li> e salvarlo in una variabile?
+
 // Avrebbe avuto senso creare un contatore che cresce da 0 a 10 per sapere quando le mail
 // sono state tutte create? 
