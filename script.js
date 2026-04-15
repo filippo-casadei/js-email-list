@@ -17,4 +17,7 @@ function richiestaApi() {
     })
 };
 
+// tramite un ciclo for chiedo di ciclarlo 10 volte
+for (let i = 0; i < 10; i++) {
 richiestaApi();
+};
